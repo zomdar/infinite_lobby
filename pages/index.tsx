@@ -13,10 +13,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.scrollContainer}>
-          <div className={styles.sliding_background}>
-
-          </div>
-          <span className={styles.logo}>
+          <div className={styles.sliding_background}></div>
+          {/* <span className={styles.logo}>
             <Image
               className={styles.sliding_background}
               src="/welcome_name.svg"
@@ -24,7 +22,7 @@ export default function Home() {
               width={5076}
               height={100}
             />
-          </span>
+          </span> */}
         </div>
       </main>
     </div>

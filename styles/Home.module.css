@@ -24,6 +24,7 @@
   width: 5076px;
   animation: slide 15s linear infinite;
   animation-iteration-count: infinite;
+  filter: invert(1);
 }
 
 @keyframes slide{
