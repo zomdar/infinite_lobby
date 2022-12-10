@@ -12,6 +12,26 @@
   align-items: center;
 }
 
+.scrollContainer {
+  overflow: hidden;
+}
+
+.sliding_background {
+  background: repeat-x;
+  height: 560px;
+  width: 5076px;
+  animation: slide 15s linear infinite;
+}
+
+@keyframes slide{
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
+
 .footer {
   display: flex;
   flex: 1;
