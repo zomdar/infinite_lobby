@@ -19,7 +19,7 @@
 }
 
 .sliding_background {
-  background: repeat-x;
+  background: url("../public/welcome_name.svg") repeat-x;
   height: 560px;
   width: 5076px;
   animation: slide 15s linear infinite;
@@ -34,6 +34,7 @@
     transform: translate3d(-1692px, 0, 0);
   }
 }
+
 
 @media (prefers-color-scheme: dark) {
   .logo img {

@@ -6,13 +6,16 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Infinite Lobby</title>
         <meta name="description" content="infinite scroll" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <div className={styles.scrollContainer}>
+          <div className={styles.sliding_background}>
+
+          </div>
           <span className={styles.logo}>
             <Image
               className={styles.sliding_background}
