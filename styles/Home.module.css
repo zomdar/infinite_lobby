@@ -1,10 +1,19 @@
 .container {
 }
 
+.textContainer {
+  display: flex;
+  flex-flow: row;
+  padding-top: 12rem;
+  padding-left: 1rem;
+  width: 50%;
+}
+
 .transducer_test {
   font-family: transducer-extended, sans-serif;
-  font-weight: 600;
+  font-weight: 100;
   font-style: normal;
+  font-size: 10px;
 }
 
 .main {
@@ -22,34 +31,12 @@
 }
 
 .scrollContainer {
+  outline: 0.5px solid white;
   overflow: hidden;
   width: 50%;
   display: flex;
   flex-flow: column;
-}
-
-.sliding_background {
-  background: url("../public/welcome_name.svg") repeat-x;
-  height: 420px;
-  width: 20000px;
-  background-size: 50%;
-  animation: scrollAnim 80s linear infinite;
-  filter: invert(1);
-}
-
-@keyframes slide {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-1692px, 0, 0);
-  }
-}
-
-@keyframes scrollAnim {
-  100% {
-    background-position: -100% 0;
-  }
+  padding: 1rem 0;
 }
 
 @media (prefers-color-scheme: dark) {
