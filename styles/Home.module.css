@@ -1,5 +1,10 @@
 .container {
-  padding: 0 2rem;
+}
+
+.transducer_test {
+  font-family: transducer-extended, sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .main {
@@ -7,27 +12,32 @@
   padding: 4rem 0;
   flex: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+.hero_section {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  height: 100%;
 }
 
 .scrollContainer {
   overflow: hidden;
-  height: 560px;
-  width: 1000px;
+  width: 50%;
+  display: flex;
+  flex-flow: column;
 }
 
 .sliding_background {
   background: url("../public/welcome_name.svg") repeat-x;
-  height: 560px;
-  width: 5076px;
-  animation: slide 15s linear infinite;
-  animation-iteration-count: infinite;
+  height: 420px;
+  width: 20000px;
+  background-size: 50%;
+  animation: scrollAnim 80s linear infinite;
   filter: invert(1);
 }
 
-@keyframes slide{
+@keyframes slide {
   0% {
     transform: translate3d(0, 0, 0);
   }
@@ -36,9 +46,11 @@
   }
 }
 
+@keyframes scrollAnim {
+  100% {
+    background-position: -100% 0;
+  }
+}
 
 @media (prefers-color-scheme: dark) {
-  .logo img {
-    filter: invert(1);
-  }
 }
