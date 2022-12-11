@@ -1,0 +1,23 @@
+.sliding_background {
+  background: url("../public/welcome_name.svg") repeat-x;
+  height: 420px;
+  width: 20000px;
+  background-size: 50%;
+  animation: scrollAnim 80s linear infinite;
+  filter: invert(1);
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
+
+@keyframes scrollAnim {
+  100% {
+    background-position: -100% 0;
+  }
+}
