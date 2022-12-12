@@ -57,7 +57,20 @@
 
 .spacer {
   outline: 0.5px solid white;
-  height: 100%;
+  overflow: hidden;
+  height: 600px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.rotating_img {
+  background: url("../public/circle_msg.svg") no-repeat;
+  height: 900px;
+  width: 900px;
+  margin-top: -140px;
+  filter: invert(1);
+  animation: rotation 25s infinite linear;
 }
 
 .main {
@@ -97,6 +110,12 @@
   }
 }
 
+@keyframes rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 768px) {
   .scrollContainer {
     outline: 0.5px solid white;
@@ -107,16 +126,30 @@
     padding: 1rem 0;
   }
 
-  .spacer {
-    outline: 0.5px solid white;
-    height: 300px;
-  }
-
   .textContainer {
     display: flex;
     flex-flow: row;
     padding-top: 8rem;
     padding-left: 1rem;
     width: 80%;
+  }
+
+  .spacer {
+    outline: 0.5px solid white;
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .rotating_img {
+    background: url("../public/circle_msg.svg") no-repeat;
+    height: 400px;
+    width: 400px;
+    filter: invert(1);
+    margin-top: -60px;
+    animation: rotation 25s infinite linear;
   }
 }

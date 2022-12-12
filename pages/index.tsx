@@ -31,7 +31,9 @@ export default function Home() {
             <div className={styles.sub_hero_sm_bottom}>
               <div className={styles.sliding_background_3}></div>
             </div>
-            <div className={styles.spacer}></div>
+            <div className={styles.spacer}>
+              <div className={styles.rotating_img}></div>
+            </div>
             <div className={styles.sub_hero_sm_top}>
               <div className={styles.sliding_background_4}></div>
             </div>
