@@ -27,7 +27,18 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className={styles.scrollContainer}></div>
+          <div className={styles.scrollContainer}>
+            <div className={styles.sub_hero_sm_bottom}>
+              <div className={styles.sliding_background_3}></div>
+            </div>
+            <div className={styles.spacer}></div>
+            <div className={styles.sub_hero_sm_top}>
+              <div className={styles.sliding_background_4}></div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.sub_hero}>
+          <div className={styles.sliding_background_2}></div>
         </div>
       </main>
     </div>
