@@ -76,11 +76,11 @@
   filter: invert(1);
 }
 
-.sub_hero_sm_top {
+.sub_hero_sm_bottom {
   padding-top: 1rem;
 }
 
-.sub_hero_sm_bottom {
+.sub_hero_sm_top {
   padding-bottom: 1rem;
 }
 
@@ -88,7 +88,7 @@
   background: url("../public/welcome_name.svg") repeat-x;
   height: 20px;
   width: 10000px;
-  animation: scrollAnim 60s linear infinite;
+  animation: scrollAnim 100s linear infinite;
   filter: invert(1);
 }
 
@@ -96,7 +96,7 @@
   background: url("../public/welcome_name.svg") repeat-x;
   height: 20px;
   width: 10000px;
-  animation: scrollAnimReverse 60s linear infinite;
+  animation: scrollAnimReverse 100s linear infinite;
   filter: invert(1);
 }
 

@@ -92,7 +92,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.scrollContainer_right}>
-            <div className={styles.sub_hero_sm_bottom}>
+            <div className={styles.sub_hero_sm_top}>
               <div className={styles.sliding_background_3}></div>
             </div>
             <div id="video-container" className={styles.spacer}>
@@ -106,7 +106,7 @@ export default function Home() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; modestbranding"
               ></iframe>
             </div>
-            <div className={styles.sub_hero_sm_top}>
+            <div className={styles.sub_hero_sm_bottom}>
               <div className={styles.sliding_background_4}></div>
             </div>
           </div>
