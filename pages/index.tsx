@@ -83,7 +83,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.hero_section}>
           <div className={styles.scrollContainer_left}>
-            <Scroller />
+            <div className={styles.scrollContainer_main}></div>
             <div className={styles.textContainer}>
               <p className={styles.transducer_base}>
                 WELCOME TO MY CHANNEL! MY NAME IS WOOJ CHOI, I LIKE WALKS ON THE

@@ -131,6 +131,14 @@
   height: 100%;
 }
 
+.scrollContainer_main {
+  background: url("../public/welcome_name.svg") repeat-x;
+  height: 420px;
+  width: 22000px;
+  animation: scrollAnim 50s linear infinite;
+  filter: invert(1);
+}
+
 .scrollContainer_left {
   border-top: 0.5px solid white;
   border-bottom: 0.5px solid white;
@@ -242,5 +250,16 @@
     filter: invert(1);
     margin-top: -60px;
     animation: rotation 25s infinite linear;
+  }
+}
+
+/* mobile width */
+@media screen and (max-width: 480px) {
+  .scrollContainer_main {
+    background: url("../public/welcome_name.svg") repeat-x;
+    height: 380px;
+    width: 22000px;
+    animation: scrollAnim 50s linear infinite;
+    filter: invert(1);
   }
 }
