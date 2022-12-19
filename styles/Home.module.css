@@ -262,4 +262,11 @@
     animation: scrollAnim 50s linear infinite;
     filter: invert(1);
   }
+  .textContainer {
+    display: flex;
+    flex-flow: row;
+    padding-top: 5rem;
+    padding-left: 1rem;
+    width: 80%;
+  }
 }
