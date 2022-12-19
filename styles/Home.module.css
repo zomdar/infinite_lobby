@@ -2,6 +2,31 @@
   width: 100%;
 }
 
+.navbar {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+}
+
+.nav_logo {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.nav_links {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
 .textContainer {
   display: flex;
   flex-flow: row;
@@ -58,7 +83,6 @@
 .spacer {
   outline: 0.5px solid white;
   overflow: hidden;
-  height: 600px;
   display: flex;
   flex-flow: row;
   justify-content: center;
@@ -75,7 +99,6 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
   flex: 1;
   display: flex;
   flex-flow: column;
@@ -83,14 +106,26 @@
 
 .hero_section {
   display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
+  flex-flow: row nowrap;
   width: 100%;
   height: 100%;
 }
 
-.scrollContainer {
-  outline: 0.5px solid white;
+.scrollContainer_left {
+  border-top: 0.5px solid white;
+  border-bottom: 0.5px solid white;
+  border-right: 0.5px solid white;
+  overflow: hidden;
+  width: 49.94%;
+  display: flex;
+  flex-flow: column;
+  padding: 1rem 0;
+}
+
+
+.scrollContainer_right {
+  border-top: 0.5px solid white;
+  border-bottom: 0.5px solid white;
   overflow: hidden;
   width: 50%;
   display: flex;
@@ -117,8 +152,29 @@
 }
 
 @media (max-width: 768px) {
-  .scrollContainer {
-    outline: 0.5px solid white;
+  .hero_section {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .scrollContainer_left {
+    border-top: 0.5px solid white;
+    border-bottom: 0.5px solid white;
+    border-right: none;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    padding: 1rem 0;
+  }
+  
+  
+  .scrollContainer_right {
+    border-top: 0.5px solid white;
+    border-bottom: 0.5px solid white;
     overflow: hidden;
     width: 100%;
     display: flex;
@@ -137,7 +193,6 @@
   .spacer {
     outline: 0.5px solid white;
     overflow: hidden;
-    height: 300px;
     display: flex;
     flex-flow: row;
     justify-content: center;
