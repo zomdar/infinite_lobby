@@ -2,7 +2,7 @@
   background: url("../public/welcome_name.svg") repeat-x;
   height: 420px;
   width: 22000px;
-  animation: scrollAnim 70s linear infinite;
+  animation: scrollAnim 50s linear infinite;
   filter: invert(1);
 }
 
@@ -10,7 +10,7 @@
     background: url("../public/welcome_name.svg") repeat-x;
     height: 210px;
     width: 10000px;
-    animation: scrollAnim 80s linear infinite;
+    animation: scrollAnim 60s linear infinite;
     filter: invert(1);
   }
   
