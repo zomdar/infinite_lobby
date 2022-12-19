@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Scroller from "./components/Scroller";
-import NavBar from "./components/NavBar";
 
 import { useEffect } from "react";
 
@@ -23,7 +22,7 @@ export default function Home() {
             alt="logo"
             width={50}
             height={50}
-            className={styles.logo}
+            className={styles.nav_logo}
           />
         </a>
       </div>
@@ -45,8 +44,8 @@ export default function Home() {
             <div id="video-container" className={styles.spacer}>
               {/* needs to be responsive */}
               <iframe
+                className={styles.video}
                 width="100%"
-                height="600"
                 src="https://www.youtube-nocookie.com/embed/GfxpRGhR0g4?autoplay=1&mute=1&controls=0&loop=1"
                 title="YouTube video player"
                 frameBorder={0}
