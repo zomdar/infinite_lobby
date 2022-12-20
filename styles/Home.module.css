@@ -73,10 +73,11 @@
   padding: 2rem 0;
   overflow: hidden;
   width: 100%;
+  border-bottom: 0.5px solid white;
 }
 
 .sliding_background_2 {
-  background: url("../public/welcome_name.svg") repeat-x;
+  background: url("../public/extra-o.svg") repeat-x;
   height: 120px;
   width: 20000px;
   animation: scrollAnim 100s linear infinite;
@@ -92,7 +93,7 @@
 }
 
 .sliding_background_3 {
-  background: url("../public/welcome_name.svg") repeat-x;
+  background: url("../public/wooj_logo.svg") repeat-x;
   height: 20px;
   width: 10000px;
   animation: scrollAnim 100s linear infinite;
@@ -100,7 +101,7 @@
 }
 
 .sliding_background_4 {
-  background: url("../public/welcome_name.svg") repeat-x;
+  background: url("../public/brooklyn_logo.svg") repeat-x;
   height: 20px;
   width: 10000px;
   animation: scrollAnimReverse 100s linear infinite;
@@ -139,7 +140,7 @@
 }
 
 .scrollContainer_main {
-  background: url("../public/welcome_name.svg") repeat-x;
+  background: url("../public/extra-o.svg") repeat-x;
   height: 420px;
   width: 22000px;
   animation: scrollAnim 50s linear infinite;
@@ -147,7 +148,6 @@
 }
 
 .scrollContainer_left {
-  border-top: 0.5px solid white;
   border-bottom: 0.5px solid white;
   border-right: 0.5px solid white;
   overflow: hidden;
@@ -158,7 +158,6 @@
 }
 
 .scrollContainer_right {
-  border-top: 0.5px solid white;
   border-bottom: 0.5px solid white;
   overflow: hidden;
   width: 50%;
@@ -263,7 +262,7 @@
 /* mobile width */
 @media screen and (max-width: 480px) {
   .scrollContainer_main {
-    background: url("../public/welcome_name.svg") repeat-x;
+    background: url("../public/extra-o.svg") repeat-x;
     height: 380px;
     width: 22000px;
     animation: scrollAnim 50s linear infinite;
