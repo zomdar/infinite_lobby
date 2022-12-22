@@ -86,6 +86,16 @@ export default function Home() {
             <div className={styles.scrollContainer_main}></div>
             <div className={styles.textContainer}>
               <p className={styles.transducer_base}>
+                <svg
+                  className={styles.triangle_spacer}
+                  width="10"
+                  height="10"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M0 0H20L0 20.2521V20V0Z" fill="white" />
+                </svg>
                 WELCOME TO MY CHANNEL! MY NAME IS WOOJ CHOI, I LIKE WALKS ON THE
                 BEACH AND MY FAVORITE POKEMON IS CHARIZARD. ENJOY!
               </p>
@@ -112,35 +122,40 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.sub_hero}>
-          <div className={styles.sliding_background_2}></div>
+          <div className={styles.sliding_background_smiley}></div>
         </div>
         <div className={styles.hero_section}>
-          <div className={styles.scrollContainer_left}>
-            <div className={styles.scrollContainer_main}></div>
+          <div className={styles.scrollContainer_left_vertical}>
+            <div className={styles.vertical_bg}></div>
+            <div className={styles.vertical_bg_2}></div>
+            <div className={styles.vertical_bg_3}></div>
+            <div className={styles.vertical_bg_4}></div>
+            <div className={styles.vertical_bg_5}></div>
+            <div className={styles.vertical_bg}></div>
+            <div className={styles.vertical_bg_2}></div>
+            <div className={styles.vertical_bg_3}></div>
+            <div className={styles.vertical_bg_4}></div>
+            <div className={styles.vertical_bg_5}></div>
+          </div>
+          <div className={styles.scrollContainer_right_vertical}>
+            <div className={styles.right_container_logo_spacer}>
+              <span className={styles.transducer_logo}>Hey, Whats up!</span>
+            </div>
             <div className={styles.textContainer}>
               <p className={styles.transducer_base}>
+                <svg
+                  className={styles.triangle_spacer}
+                  width="10"
+                  height="10"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M0 0H20L0 20.2521V20V0Z" fill="white" />
+                </svg>
                 WELCOME TO MY CHANNEL! MY NAME IS WOOJ CHOI, I LIKE WALKS ON THE
                 BEACH AND MY FAVORITE POKEMON IS CHARIZARD. ENJOY!
               </p>
-            </div>
-          </div>
-          <div className={styles.scrollContainer_right}>
-            <div className={styles.sub_hero_sm_top}>
-              <div className={styles.sliding_background_3}></div>
-            </div>
-            <div id="video-container" className={styles.spacer}>
-              {/* needs to be responsive */}
-              <iframe
-                className={styles.video}
-                width="100%"
-                src="https://www.youtube-nocookie.com/embed/GfxpRGhR0g4?autoplay=1&mute=1&controls=0&loop=1"
-                title="YouTube video player"
-                frameBorder={0}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; modestbranding"
-              ></iframe>
-            </div>
-            <div className={styles.sub_hero_sm_bottom}>
-              <div className={styles.sliding_background_4}></div>
             </div>
           </div>
         </div>
