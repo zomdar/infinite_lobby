@@ -279,6 +279,7 @@
   overflow-x: scroll;
   width: 100%;
   padding: 3rem 0;
+  overflow-y: hidden;
 }
 
 .card {
