@@ -1,12 +1,44 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Scroller from "./components/Scroller";
-
 import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useScroll } from "react-use-gesture";
+
+import styles from "../styles/Home.module.css";
+
+const clamp = (value: number, clampAt: number = 30) => {
+  if (value > 0) {
+    return value > clampAt ? clampAt : value;
+  } else {
+    return value < -clampAt ? -clampAt : value;
+  }
+};
+
+const projects = ["/flower_shop.png", "/flower_shop.png", "/flower_shop.png", "/flower_shop.png", "/flower_shop.png"];
+const projects_second = ["/flower_shop.png", "/price_is_crypto.png", "/slot_party.png", "/stock_city.png", "/turtle_talk.png"];
 
 export default function Home() {
   useEffect(() => {}, []);
+
+  const controls = useAnimation();
+
+  const bind = useScroll((event) => {
+    controls.start({
+      transform: `perspective(500px) rotateY(${
+        event.scrolling ? clamp(event.delta[0]) : 0
+      }deg)`,
+    });
+  });
+
+  const controls_second = useAnimation();
+
+  const bind_second = useScroll((event) => {
+    controls_second.start({
+      transform: `perspective(500px) rotateY(${
+        event.scrolling ? clamp(event.delta[0]) : 0
+      }deg)`,
+    });
+  });
 
   return (
     <div className={styles.container}>
@@ -126,16 +158,21 @@ export default function Home() {
         </div>
         <div className={styles.hero_section}>
           <div className={styles.scrollContainer_left_vertical}>
-            <div className={styles.vertical_bg}></div>
-            <div className={styles.vertical_bg_2}></div>
-            <div className={styles.vertical_bg_3}></div>
-            <div className={styles.vertical_bg_4}></div>
-            <div className={styles.vertical_bg_5}></div>
-            <div className={styles.vertical_bg}></div>
-            <div className={styles.vertical_bg_2}></div>
-            <div className={styles.vertical_bg_3}></div>
-            <div className={styles.vertical_bg_4}></div>
-            <div className={styles.vertical_bg_5}></div>
+            <div className={styles.middle_logo}>
+              <span>hey there!</span>
+            </div>
+            <div className={styles.bg_scrolling_content}>
+              <div className={styles.vertical_bg}></div>
+              <div className={styles.vertical_bg_2}></div>
+              <div className={styles.vertical_bg_3}></div>
+              <div className={styles.vertical_bg_4}></div>
+              <div className={styles.vertical_bg_5}></div>
+              <div className={styles.vertical_bg}></div>
+              <div className={styles.vertical_bg_2}></div>
+              <div className={styles.vertical_bg_3}></div>
+              <div className={styles.vertical_bg_4}></div>
+              <div className={styles.vertical_bg_5}></div>
+            </div>
           </div>
           <div className={styles.scrollContainer_right_vertical}>
             <div className={styles.right_container_logo_spacer}>
@@ -161,6 +198,29 @@ export default function Home() {
         </div>
         <div className={styles.sub_hero}>
           <div className={styles.sliding_background_2}></div>
+        </div>
+        <div className={styles.horizontal_scroll_container} {...bind()}>
+          {projects.map((src) => (
+            <motion.div
+              key={src}
+              className={styles.card}
+              style={{ backgroundImage: `url(${src})` }}
+              animate={controls}
+            />
+          ))}
+        </div>
+        <div
+          className={styles.horizontal_scroll_container_reverse}
+          {...bind_second()}
+        >
+          {projects_second.map((src) => (
+            <motion.div
+              key={src}
+              className={styles.card_right}
+              style={{ backgroundImage: `url(${src})` }}
+              animate={controls_second}
+            />
+          ))}
         </div>
       </main>
     </div>
