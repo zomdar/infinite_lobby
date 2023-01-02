@@ -293,6 +293,13 @@
   background-position: center center;
 }
 
+.card:hover {
+  border: 2px solid white;
+  border-radius: 4rem;
+  box-sizing: border-box;
+}
+
+
 .card_right {
   flex-shrink: 0;
   width: 500px;
@@ -303,6 +310,12 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-color: white;
+}
+
+.card_right:hover {
+  border: 2px solid white;
+  border-radius: 4rem;
+  box-sizing: border-box;
 }
 
 .horizontal_scroll_container_reverse {

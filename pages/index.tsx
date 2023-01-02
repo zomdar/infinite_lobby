@@ -14,8 +14,20 @@ const clamp = (value: number, clampAt: number = 30) => {
   }
 };
 
-const projects = ["/flower_shop.png", "/flower_shop.png", "/flower_shop.png", "/flower_shop.png", "/flower_shop.png"];
-const projects_second = ["/flower_shop.png", "/price_is_crypto.png", "/slot_party.png", "/stock_city.png", "/turtle_talk.png"];
+const projects = [
+  "/flower_shop.png",
+  "/price_is_crypto.png",
+  "/slot_party.png",
+  "/stock_city.png",
+  "/turtle_talk.png",
+];
+const projects_second = [
+  "/flower_shop.png",
+  "/price_is_crypto.png",
+  "/slot_party.png",
+  "/stock_city.png",
+  "/turtle_talk.png",
+];
 
 export default function Home() {
   useEffect(() => {}, []);
