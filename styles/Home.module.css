@@ -291,6 +291,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -298,7 +299,6 @@
   border-radius: 4rem;
   box-sizing: border-box;
 }
-
 
 .card_right {
   flex-shrink: 0;
@@ -310,6 +310,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-color: white;
+  cursor: pointer;
 }
 
 .card_right:hover {

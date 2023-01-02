@@ -15,18 +15,48 @@ const clamp = (value: number, clampAt: number = 30) => {
 };
 
 const projects = [
-  "/flower_shop.png",
-  "/price_is_crypto.png",
-  "/slot_party.png",
-  "/stock_city.png",
-  "/turtle_talk.png",
+  {
+    img: "/flower_shop.png",
+    link: "https://www.figma.com/community/file/1180406788210743591",
+  },
+  {
+    img: "/price_is_crypto.png",
+    link: "https://www.figma.com/community/widget/1153888616147349345/Price-is-Crypto",
+  },
+  {
+    img: "/slot_party.png",
+    link: "https://www.figma.com/community/widget/1164791472745970593/slot-party",
+  },
+  {
+    img: "/stock_city.png",
+    link: "https://www.figma.com/community/widget/1159601239397132236/Stock-City",
+  },
+  {
+    img: "/turtle_talk.png",
+    link: "https://www.figma.com/community/widget/1154802987377946693",
+  },
 ];
 const projects_second = [
-  "/flower_shop.png",
-  "/price_is_crypto.png",
-  "/slot_party.png",
-  "/stock_city.png",
-  "/turtle_talk.png",
+  {
+    img: "/flower_shop.png",
+    link: "https://www.figma.com/community/file/1180406788210743591",
+  },
+  {
+    img: "/price_is_crypto.png",
+    link: "https://www.figma.com/community/widget/1153888616147349345/Price-is-Crypto",
+  },
+  {
+    img: "/slot_party.png",
+    link: "https://www.figma.com/community/widget/1164791472745970593/slot-party",
+  },
+  {
+    img: "/stock_city.png",
+    link: "https://www.figma.com/community/widget/1159601239397132236/Stock-City",
+  },
+  {
+    img: "/turtle_talk.png",
+    link: "https://www.figma.com/community/widget/1154802987377946693",
+  },
 ];
 
 export default function Home() {
@@ -51,6 +81,10 @@ export default function Home() {
       }deg)`,
     });
   });
+
+  const goToLink = (link: string) => {
+    window.open(link, "_blank");
+  };
 
   return (
     <div className={styles.container}>
@@ -214,10 +248,13 @@ export default function Home() {
         <div className={styles.horizontal_scroll_container} {...bind()}>
           {projects.map((src) => (
             <motion.div
-              key={src}
+              key={src.img}
               className={styles.card}
-              style={{ backgroundImage: `url(${src})` }}
+              style={{ backgroundImage: `url(${src.img})` }}
               animate={controls}
+              onClick={() => {
+                goToLink(src.link);
+              }}
             />
           ))}
         </div>
@@ -227,10 +264,13 @@ export default function Home() {
         >
           {projects_second.map((src) => (
             <motion.div
-              key={src}
+              key={src.img}
               className={styles.card_right}
-              style={{ backgroundImage: `url(${src})` }}
+              style={{ backgroundImage: `url(${src.img})` }}
               animate={controls_second}
+              onClick={() => {
+                goToLink(src.link);
+              }}
             />
           ))}
         </div>
