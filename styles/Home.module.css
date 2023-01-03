@@ -70,7 +70,7 @@
   flex-flow: row;
   padding-top: 12rem;
   padding-left: 1rem;
-  width: 50%;
+  width: 60%;
 }
 
 .textContainer_long {
@@ -119,7 +119,7 @@
   background: url("../public/check_out_my_work.svg") repeat-x;
   height: 120px;
   width: 20000px;
-  animation: scrollAnim 100s linear infinite;
+  animation: scrollAnimReverse 100s linear infinite;
   filter: invert(1);
 }
 
