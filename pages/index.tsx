@@ -104,8 +104,11 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Infinite Lobby</title>
-        <meta name="description" content="infinite scroll" />
+        <title>Hi, I'm Wooj</title>
+        <meta
+          name="description"
+          content="I like long walks on the beach and my favourite Pokemon is Charizard."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.navbar}>
