@@ -22,13 +22,13 @@ const projects = [
   },
   {
     id: "2",
-    img: "/price_is_crypto.png",
-    link: "https://www.figma.com/community/widget/1153888616147349345/Price-is-Crypto",
+    img: "/slot_party.png",
+    link: "https://www.figma.com/community/widget/1164791472745970593/slot-party",
   },
   {
     id: "3",
-    img: "/slot_party.png",
-    link: "https://www.figma.com/community/widget/1164791472745970593/slot-party",
+    img: "/turtle_talk.png",
+    link: "https://www.figma.com/community/widget/1154802987377946693",
   },
   {
     id: "4",
@@ -37,35 +37,35 @@ const projects = [
   },
   {
     id: "5",
-    img: "/turtle_talk.png",
-    link: "https://www.figma.com/community/widget/1154802987377946693",
+    img: "/price_is_crypto.png",
+    link: "https://www.figma.com/community/widget/1153888616147349345/Price-is-Crypto",
   },
 ];
 const projects_second = [
   {
-    id: "6",
+    id: "1",
     img: "/flower_shop.png",
     link: "https://www.figma.com/community/file/1180406788210743591",
   },
   {
-    id: "7",
-    img: "/price_is_crypto.png",
-    link: "https://www.figma.com/community/widget/1153888616147349345/Price-is-Crypto",
-  },
-  {
-    id: "8",
+    id: "2",
     img: "/slot_party.png",
     link: "https://www.figma.com/community/widget/1164791472745970593/slot-party",
   },
   {
-    id: "9",
+    id: "3",
+    img: "/turtle_talk.png",
+    link: "https://www.figma.com/community/widget/1154802987377946693",
+  },
+  {
+    id: "4",
     img: "/stock_city.png",
     link: "https://www.figma.com/community/widget/1159601239397132236/Stock-City",
   },
   {
-    id: "10",
-    img: "/turtle_talk.png",
-    link: "https://www.figma.com/community/widget/1154802987377946693",
+    id: "5",
+    img: "/price_is_crypto.png",
+    link: "https://www.figma.com/community/widget/1153888616147349345/Price-is-Crypto",
   },
 ];
 
@@ -252,7 +252,7 @@ export default function Home() {
             <div className={styles.right_container_logo_spacer}>
               <span className={styles.transducer_logo}>Hey, Whats up!</span>
             </div>
-            <div className={styles.textContainer}>
+            <div className={styles.textContainer_long}>
               <p className={styles.transducer_base}>
                 <svg
                   className={styles.triangle_spacer}
@@ -264,14 +264,18 @@ export default function Home() {
                 >
                   <path d="M0 0H20L0 20.2521V20V0Z" fill="white" />
                 </svg>
-                WELCOME TO MY CHANNEL! MY NAME IS WOOJ CHOI, I LIKE WALKS ON THE
-                BEACH AND MY FAVORITE POKEMON IS CHARIZARD. ENJOY!
+                I'm a designer that loves the intersection of art and code! Do
+                you remember when the web used to be delightful? Buttons + knobs
+                + sounds + experimentation? We have an astounding medium here,
+                to be able to express and do whatever we want. We outside! I
+                work at M&T Bank as a Senior Designer making + managing Design
+                Systems, making rad UI kits and Figma widgets in my free time.
               </p>
             </div>
           </div>
         </div>
         <div className={styles.sub_hero}>
-          <div className={styles.sliding_background_2}></div>
+          <div className={styles.sliding_background_check_out_my_work}></div>
         </div>
         <div className={styles.horizontal_scroll_container} {...bind()}>
           {projects.map((src) => (

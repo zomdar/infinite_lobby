@@ -73,11 +73,19 @@
   width: 50%;
 }
 
+.textContainer_long {
+  display: flex;
+  flex-flow: row;
+  padding-top: 12rem;
+  padding-left: 1rem;
+  width: 80%;
+}
+
 .transducer_base {
   font-family: transducer-extended, sans-serif;
   font-weight: 100;
   font-style: normal;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .transducer_logo {
@@ -101,6 +109,14 @@
 
 .sliding_background_2 {
   background: url("../public/extra-o.svg") repeat-x;
+  height: 120px;
+  width: 20000px;
+  animation: scrollAnim 100s linear infinite;
+  filter: invert(1);
+}
+
+.sliding_background_check_out_my_work {
+  background: url("../public/check_out_my_work.svg") repeat-x;
   height: 120px;
   width: 20000px;
   animation: scrollAnim 100s linear infinite;
