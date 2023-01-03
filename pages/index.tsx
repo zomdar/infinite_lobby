@@ -44,28 +44,23 @@ const projects = [
 const projects_second = [
   {
     id: "1",
-    img: "/flower_shop.png",
-    link: "https://www.figma.com/community/file/1180406788210743591",
+    img: "/banking_mobile.png",
+    link: "https://apps.apple.com/us/app/m-t-mobile-banking/id397761931",
   },
   {
     id: "2",
-    img: "/slot_party.png",
-    link: "https://www.figma.com/community/widget/1164791472745970593/slot-party",
+    img: "/currency_lib.png",
+    link: "https://currency-design-system.netlify.app/mt/general/about-currency/design",
   },
   {
     id: "3",
-    img: "/turtle_talk.png",
-    link: "https://www.figma.com/community/widget/1154802987377946693",
+    img: "/uspto_patent_center.png",
+    link: "https://patentcenter.uspto.gov/",
   },
   {
     id: "4",
-    img: "/stock_city.png",
-    link: "https://www.figma.com/community/widget/1159601239397132236/Stock-City",
-  },
-  {
-    id: "5",
-    img: "/price_is_crypto.png",
-    link: "https://www.figma.com/community/widget/1153888616147349345/Price-is-Crypto",
+    img: "/bearly_ai.png",
+    link: "https://bearly.ai/",
   },
 ];
 
