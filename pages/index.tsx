@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useScroll } from "react-use-gesture";
 
@@ -16,44 +16,54 @@ const clamp = (value: number, clampAt: number = 30) => {
 
 const projects = [
   {
+    id: "1",
     img: "/flower_shop.png",
     link: "https://www.figma.com/community/file/1180406788210743591",
   },
   {
+    id: "2",
     img: "/price_is_crypto.png",
     link: "https://www.figma.com/community/widget/1153888616147349345/Price-is-Crypto",
   },
   {
+    id: "3",
     img: "/slot_party.png",
     link: "https://www.figma.com/community/widget/1164791472745970593/slot-party",
   },
   {
+    id: "4",
     img: "/stock_city.png",
     link: "https://www.figma.com/community/widget/1159601239397132236/Stock-City",
   },
   {
+    id: "5",
     img: "/turtle_talk.png",
     link: "https://www.figma.com/community/widget/1154802987377946693",
   },
 ];
 const projects_second = [
   {
+    id: "6",
     img: "/flower_shop.png",
     link: "https://www.figma.com/community/file/1180406788210743591",
   },
   {
+    id: "7",
     img: "/price_is_crypto.png",
     link: "https://www.figma.com/community/widget/1153888616147349345/Price-is-Crypto",
   },
   {
+    id: "8",
     img: "/slot_party.png",
     link: "https://www.figma.com/community/widget/1164791472745970593/slot-party",
   },
   {
+    id: "9",
     img: "/stock_city.png",
     link: "https://www.figma.com/community/widget/1159601239397132236/Stock-City",
   },
   {
+    id: "10",
     img: "/turtle_talk.png",
     link: "https://www.figma.com/community/widget/1154802987377946693",
   },
@@ -61,6 +71,8 @@ const projects_second = [
 
 export default function Home() {
   useEffect(() => {}, []);
+
+  const [hover, setHover] = useState(false);
 
   const controls = useAnimation();
 
@@ -84,6 +96,14 @@ export default function Home() {
 
   const goToLink = (link: string) => {
     window.open(link, "_blank");
+  };
+
+  const showHoverContent = (e: any) => {
+    setHover(true);
+  };
+
+  const hideHoverContent = (e: any) => {
+    setHover(false);
   };
 
   return (
@@ -205,7 +225,12 @@ export default function Home() {
         <div className={styles.hero_section}>
           <div className={styles.scrollContainer_left_vertical}>
             <div className={styles.middle_logo}>
-              <span>hey there!</span>
+              <Image
+                src="/twitter-pin.png"
+                alt="Wooj Choi Logo"
+                fill={true}
+                className={styles.twitter_pin}
+              />
             </div>
             <div className={styles.bg_scrolling_content}>
               <div className={styles.vertical_bg}></div>
@@ -249,6 +274,7 @@ export default function Home() {
           {projects.map((src) => (
             <motion.div
               key={src.img}
+              id={src.id}
               className={styles.card}
               style={{ backgroundImage: `url(${src.img})` }}
               animate={controls}
@@ -265,13 +291,25 @@ export default function Home() {
           {projects_second.map((src) => (
             <motion.div
               key={src.img}
+              id={src.id}
               className={styles.card_right}
               style={{ backgroundImage: `url(${src.img})` }}
               animate={controls_second}
               onClick={() => {
                 goToLink(src.link);
               }}
-            />
+              onMouseEnter={showHoverContent}
+              onMouseLeave={hideHoverContent}
+            >
+              {/* show or hide based on boolean */}
+              {/* {hover && (
+                <div
+                  className={styles.card_content}
+                >
+                  <p className={styles.card_text}>hey there</p>
+                </div>
+              )} */}
+            </motion.div>
           ))}
         </div>
       </main>
