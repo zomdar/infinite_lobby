@@ -230,6 +230,9 @@ export default function Home() {
                 alt="Wooj Choi Logo"
                 fill={true}
                 className={styles.twitter_pin}
+                onClick={() => {
+                  goToLink("https://twitter.com/zomdar");
+                }}
               />
             </div>
             <div className={styles.bg_scrolling_content}>
