@@ -228,7 +228,6 @@ export default function Home() {
           <div className={styles.hero_section}>
             <div className={styles.scrollContainer_left_vertical}>
               <div className={styles.middle_logo}>
-                {/* <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}> */}
                 <Image
                   src="/twitter-pin.png"
                   alt="Wooj Choi Logo"
@@ -238,7 +237,6 @@ export default function Home() {
                     goToLink("https://twitter.com/zomdar");
                   }}
                 />
-                {/* </motion.div> */}
               </div>
               <div className={styles.bg_scrolling_content}>
                 <div className={styles.vertical_bg}></div>
