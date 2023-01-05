@@ -59,6 +59,11 @@ const projects_second = [
   },
   {
     id: "4",
+    img: "/uspto_design_lib.png",
+    link: "https://uspto.github.io/USPTO-Design-System/index.html",
+  },
+  {
+    id: "5",
     img: "/bearly_ai.png",
     link: "https://bearly.ai/",
   },
