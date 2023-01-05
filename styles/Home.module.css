@@ -76,7 +76,6 @@
 .textContainer_long {
   display: flex;
   flex-flow: row;
-  padding-top: 12rem;
   padding-left: 1rem;
   width: 80%;
 }
@@ -453,6 +452,9 @@
     padding-left: 1rem;
     width: 80%;
   }
+}
+
+@media (max-width: 1090px) {
 }
 
 @media (max-width: 768px) {
