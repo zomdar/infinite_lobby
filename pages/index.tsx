@@ -6,15 +6,16 @@ import { useScroll } from "react-use-gesture";
 
 import styles from "../styles/Home.module.css";
 
-const clamp = (value: number, clampAt: number = 30) => {
-  if (value > 0) {
-    return value > clampAt ? clampAt : value;
-  } else {
-    return value < -clampAt ? -clampAt : value;
-  }
+type Project = {
+  id: string;
+  img: string;
+  link: string;
 };
 
-const projects = [
+const clamp = (value: number, clampAt = 30): number =>
+  value > 0 ? Math.min(value, clampAt) : Math.max(value, -clampAt);
+
+const projects: Project[] = [
   {
     id: "1",
     img: "/flower_shop.png",
@@ -41,7 +42,8 @@ const projects = [
     link: "https://www.figma.com/community/widget/1153888616147349345/Price-is-Crypto",
   },
 ];
-const projects_second = [
+
+const projects_second: Project[] = [
   {
     id: "1",
     img: "/banking_mobile.png",
@@ -69,41 +71,27 @@ const projects_second = [
   },
 ];
 
-export default function Home() {
+export default function Home(): JSX.Element {
   useEffect(() => {}, []);
 
   const [hover, setHover] = useState(false);
 
   const controls = useAnimation();
-
-  const bind = useScroll((event) => {
+  const bind = useScroll(({ scrolling, delta }) => {
     controls.start({
-      transform: `perspective(500px) rotateY(${
-        event.scrolling ? clamp(event.delta[0]) : 0
-      }deg)`,
+      transform: `perspective(500px) rotateY(${scrolling ? clamp(delta[0]) : 0}deg)`,
     });
   });
 
   const controls_second = useAnimation();
-
-  const bind_second = useScroll((event) => {
+  const bind_second = useScroll(({ scrolling, delta }) => {
     controls_second.start({
-      transform: `perspective(500px) rotateY(${
-        event.scrolling ? clamp(event.delta[0]) : 0
-      }deg)`,
+      transform: `perspective(500px) rotateY(${scrolling ? clamp(delta[0]) : 0}deg)`,
     });
   });
 
-  const goToLink = (link: string) => {
+  const goToLink = (link: string): void => {
     window.open(link, "_blank");
-  };
-
-  const showHoverContent = (e: any) => {
-    setHover(true);
-  };
-
-  const hideHoverContent = (e: any) => {
-    setHover(false);
   };
 
   return (
@@ -314,17 +302,7 @@ export default function Home() {
                 onClick={() => {
                   goToLink(src.link);
                 }}
-                onMouseEnter={showHoverContent}
-                onMouseLeave={hideHoverContent}
               >
-                {/* show or hide based on boolean */}
-                {/* {hover && (
-                <div
-                  className={styles.card_content}
-                >
-                  <p className={styles.card_text}>hey there</p>
-                </div>
-              )} */}
               </motion.div>
             ))}
           </div>
